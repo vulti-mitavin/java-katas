@@ -1,11 +1,11 @@
 package org.example.impl.weatherdata;
 
+import lombok.experimental.UtilityClass;
+
 import java.util.Arrays;
 
+@UtilityClass
 public class WeatherDataMapper {
-
-    private WeatherDataMapper() {
-    }
 
     public static WeatherData map(String[] line) {
         try {
