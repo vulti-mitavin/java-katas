@@ -4,26 +4,29 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e3574a8e-c28a-41a7-8a9a-ca9deed4465a" name="Changes" comment="Setup and Kata-04 part 1">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/kata-04-data-munging/src/main/java/org/example/impl/file/ResourceReader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/kata-04-data-munging/src/main/java/org/example/impl/weatherdata/WeatherData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/kata-04-data-munging/src/main/java/org/example/impl/weatherdata/WeatherDataImporter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/kata-04-data-munging/src/main/java/org/example/impl/weatherdata/WeatherDataMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/kata-04-data-munging/src/main/java/org/example/impl/weatherdata/WeatherDataService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/kata-04-data-munging/src/main/resources/weather.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/kata-04-data-munging/src/test/java/org/example/impl/ResourceReaderTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/kata-04-data-munging/src/test/java/org/example/impl/weatherdata/WeatherDataImporterTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/kata-04-data-munging/src/test/java/org/example/impl/weatherdata/WeatherDataMapperTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/kata-04-data-munging/src/test/java/org/example/impl/weatherdata/WeatherDataServiceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/kata-04-data-munging/src/test/java/org/example/impl/weatherdata/WeatherDataTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+    <list default="true" id="e3574a8e-c28a-41a7-8a9a-ca9deed4465a" name="Changes" comment="Lombok">
+      <change afterPath="$PROJECT_DIR$/src/kata-04-data-munging/src/main/java/org/example/impl/importer/FootballDataImporter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/kata-04-data-munging/src/main/java/org/example/impl/importer/WeatherDataImporter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/kata-04-data-munging/src/main/java/org/example/impl/model/FootballTeam.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/kata-04-data-munging/src/main/java/org/example/impl/service/FootballDataService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/kata-04-data-munging/src/main/java/org/example/impl/util/Constants.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/kata-04-data-munging/src/main/resources/football.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/kata-04-data-munging/src/test/java/org/example/impl/importer/FootballDataImporterTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/kata-04-data-munging/src/test/java/org/example/impl/importer/WeatherDataImporterTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/kata-04-data-munging/src/test/java/org/example/impl/model/FootballTeamTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/kata-04-data-munging/src/test/java/org/example/impl/service/FootballDataServiceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/how-big-how-fast/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/kata-04-data-munging/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/how-big-how-fast/src/main/java/org/example/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/kata-04-data-munging/src/main/java/org/example/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/how-big-how-fast/src/test/java/org/example/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/kata-04-data-munging/src/test/java/org/example/AppTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/kata-04-data-munging/src/main/java/org/example/impl/file/ResourceReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/kata-04-data-munging/src/main/java/org/example/impl/util/ResourceReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/kata-04-data-munging/src/main/java/org/example/impl/weatherdata/WeatherData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/kata-04-data-munging/src/main/java/org/example/impl/model/WeatherData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/kata-04-data-munging/src/main/java/org/example/impl/weatherdata/WeatherDataImporter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/kata-04-data-munging/src/main/java/org/example/impl/importer/AbstractDataImporter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/kata-04-data-munging/src/main/java/org/example/impl/weatherdata/WeatherDataMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/kata-04-data-munging/src/main/java/org/example/impl/weatherdata/WeatherDataService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/kata-04-data-munging/src/main/java/org/example/impl/service/WeatherDataService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/kata-04-data-munging/src/test/java/org/example/impl/ResourceReaderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/kata-04-data-munging/src/test/java/org/example/impl/ResourceReaderTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/kata-04-data-munging/src/test/java/org/example/impl/weatherdata/WeatherDataImporterTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/kata-04-data-munging/src/test/java/org/example/impl/weatherdata/WeatherDataMapperTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/kata-04-data-munging/src/test/java/org/example/impl/weatherdata/WeatherDataServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/kata-04-data-munging/src/test/java/org/example/impl/service/WeatherDataServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/kata-04-data-munging/src/test/java/org/example/impl/weatherdata/WeatherDataTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/kata-04-data-munging/src/test/java/org/example/impl/model/WeatherDataTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,17 +82,29 @@
       <recent name="C:\Users\michi\apps\java-katas\src\kata-04-data-munging\src\main\resources" />
     </key>
     <key name="MoveMembersDialog.RECENTS_KEY">
+      <recent name="org.example.impl.Constants" />
       <recent name="org.example.impl.WeatherDataMapper" />
       <recent name="WeatherDataMapper.java" />
       <recent name="WeatherDataMapper" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="org.example.impl.importer" />
+      <recent name="org.example.impl.model" />
+      <recent name="org.example.impl.service" />
+      <recent name="org.example.impl" />
       <recent name="org.example.impl.weatherdata" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="org.example.impl.model" />
+      <recent name="org.example.impl.service" />
       <recent name="org.example.impl.weatherdata" />
       <recent name="org.example.impl" />
       <recent name="impl" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.example.impl.service" />
+      <recent name="org.example.impl.football" />
+      <recent name="org.example.impl.importer" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -97,19 +112,33 @@
       <command value="WeatherDataMapperTest.lineMapTestIllegalValue" />
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.WeatherDataMapperTest.lineMapTestIllegalValue">
-    <configuration name="ResourceReaderTest.testReadFileContainsNoNullValues" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.WeatherDataImporterTest.importDataTest">
+    <configuration name="FootballDataImporterTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="kata-04-data-munging" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.example.impl.*" />
+          <option name="PATTERN" value="org.example.impl.importer.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="org.example.impl" />
-      <option name="MAIN_CLASS_NAME" value="org.example.impl.ResourceReaderTest" />
-      <option name="METHOD_NAME" value="testReadFileContainsNoNullValues" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="PACKAGE_NAME" value="org.example.impl.importer" />
+      <option name="MAIN_CLASS_NAME" value="org.example.impl.importer.FootballDataImporterTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WeatherDataImporterTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="kata-04-data-munging" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.impl.importer.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example.impl.importer" />
+      <option name="MAIN_CLASS_NAME" value="org.example.impl.importer.WeatherDataImporterTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -118,61 +147,45 @@
       <module name="kata-04-data-munging" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.example.impl.weatherdata.*" />
+          <option name="PATTERN" value="org.example.impl.importer.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="org.example.impl.weatherdata" />
-      <option name="MAIN_CLASS_NAME" value="org.example.impl.weatherdata.WeatherDataImporterTest" />
+      <option name="PACKAGE_NAME" value="org.example.impl.importer" />
+      <option name="MAIN_CLASS_NAME" value="org.example.impl.importer.WeatherDataImporterTest" />
       <option name="METHOD_NAME" value="importDataTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="WeatherDataMapperTest.lineMapTestIllegalValue" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="WeatherDataImporterTest.lineMapTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="kata-04-data-munging" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.example.impl.weatherdata.*" />
+          <option name="PATTERN" value="org.example.impl.importer.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="org.example.impl.weatherdata" />
-      <option name="MAIN_CLASS_NAME" value="org.example.impl.weatherdata.WeatherDataMapperTest" />
+      <option name="PACKAGE_NAME" value="org.example.impl.importer" />
+      <option name="MAIN_CLASS_NAME" value="org.example.impl.importer.WeatherDataImporterTest" />
+      <option name="METHOD_NAME" value="lineMapTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WeatherDataImporterTest.lineMapTestIllegalValue" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="kata-04-data-munging" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.impl.importer.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example.impl.importer" />
+      <option name="MAIN_CLASS_NAME" value="org.example.impl.importer.WeatherDataImporterTest" />
       <option name="METHOD_NAME" value="lineMapTestIllegalValue" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="WeatherDataServiceTest.testFindDayWithLeastTempSpread" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="kata-04-data-munging" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.impl.weatherdata.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.example.impl.weatherdata" />
-      <option name="MAIN_CLASS_NAME" value="org.example.impl.weatherdata.WeatherDataServiceTest" />
-      <option name="METHOD_NAME" value="testFindDayWithLeastTempSpread" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="WeatherDataServiceTest.testFindDayWithLeastTempSpread_2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="kata-04-data-munging" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.impl.weatherdata.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.example.impl.weatherdata" />
-      <option name="MAIN_CLASS_NAME" value="org.example.impl.weatherdata.WeatherDataServiceTest" />
-      <option name="METHOD_NAME" value="testFindDayWithLeastTempSpread_2" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -205,20 +218,20 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="JUnit.ResourceReaderTest.testReadFileContainsNoNullValues" />
+      <item itemvalue="JUnit.FootballDataImporterTest" />
+      <item itemvalue="JUnit.WeatherDataImporterTest" />
+      <item itemvalue="JUnit.WeatherDataImporterTest.lineMapTest" />
+      <item itemvalue="JUnit.WeatherDataImporterTest.lineMapTestIllegalValue" />
       <item itemvalue="JUnit.WeatherDataImporterTest.importDataTest" />
-      <item itemvalue="JUnit.WeatherDataMapperTest.lineMapTestIllegalValue" />
-      <item itemvalue="JUnit.WeatherDataServiceTest.testFindDayWithLeastTempSpread_2" />
-      <item itemvalue="JUnit.WeatherDataServiceTest.testFindDayWithLeastTempSpread" />
       <item itemvalue="Maven.karate-chop [clean,test]" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.WeatherDataMapperTest.lineMapTestIllegalValue" />
-        <item itemvalue="JUnit.WeatherDataServiceTest.testFindDayWithLeastTempSpread_2" />
-        <item itemvalue="JUnit.WeatherDataServiceTest.testFindDayWithLeastTempSpread" />
         <item itemvalue="JUnit.WeatherDataImporterTest.importDataTest" />
-        <item itemvalue="JUnit.ResourceReaderTest.testReadFileContainsNoNullValues" />
+        <item itemvalue="JUnit.WeatherDataImporterTest" />
+        <item itemvalue="JUnit.WeatherDataImporterTest.lineMapTest" />
+        <item itemvalue="JUnit.WeatherDataImporterTest.lineMapTestIllegalValue" />
+        <item itemvalue="JUnit.FootballDataImporterTest" />
       </list>
     </recent_temporary>
   </component>
@@ -238,7 +251,21 @@
       <option name="project" value="LOCAL" />
       <updated>1666429236751</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Setup and Kata-04 part 1">
+      <created>1668156756989</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1668156756989</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Lombok">
+      <created>1668157090026</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1668157090027</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -255,9 +282,16 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Karate-Chop v1" />
     <MESSAGE value="Setup and Kata-04 part 1" />
-    <option name="LAST_COMMIT_MESSAGE" value="Setup and Kata-04 part 1" />
+    <MESSAGE value="Lombok" />
+    <option name="LAST_COMMIT_MESSAGE" value="Lombok" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/java_katas$FootballTeamTest.ic" NAME="FootballTeamTest Coverage Results" MODIFIED="1668163348711" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>org.example.impl.model.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/java_katas$FootballDataImporterTest.ic" NAME="FootballDataImporterTest Coverage Results" MODIFIED="1668163479423" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>org.example.impl.importer.*</FILTER>
+    </SUITE>
     <SUITE FILE_PATH="coverage/java_katas$WeatherDataServiceTest.ic" NAME="WeatherDataServiceTest Coverage Results" MODIFIED="1666727414155" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>org.example.impl.weatherdata.*</FILTER>
     </SUITE>
@@ -267,8 +301,11 @@
     <SUITE FILE_PATH="coverage/java_katas$WeatherDataMapperTest.ic" NAME="WeatherDataMapperTest Coverage Results" MODIFIED="1666555096090" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>org.example.impl.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/java_katas$WeatherDataImporterTest.ic" NAME="WeatherDataImporterTest Coverage Results" MODIFIED="1666727352055" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>org.example.impl.weatherdata.*</FILTER>
+    <SUITE FILE_PATH="coverage/java_katas$FootballDataServiceTest.ic" NAME="FootballDataServiceTest Coverage Results" MODIFIED="1668163316263" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>org.example.impl.service.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/java_katas$WeatherDataImporterTest.ic" NAME="WeatherDataImporterTest Coverage Results" MODIFIED="1668163569841" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>org.example.impl.importer.*</FILTER>
     </SUITE>
   </component>
 </project>

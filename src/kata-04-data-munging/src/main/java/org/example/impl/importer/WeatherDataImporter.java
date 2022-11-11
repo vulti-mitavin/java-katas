@@ -1,13 +1,17 @@
-package org.example.impl.weatherdata;
+package org.example.impl.importer;
 
-import lombok.experimental.UtilityClass;
+import org.example.impl.model.WeatherData;
 
 import java.util.Arrays;
 
-@UtilityClass
-public class WeatherDataMapper {
+public class WeatherDataImporter extends AbstractDataImporter<WeatherData> {
 
-    public static WeatherData map(String[] line) {
+    public WeatherDataImporter() {
+        super(0, 4);
+    }
+
+    @Override
+    public WeatherData map(String[] line) {
         try {
             return WeatherData.builder()
                     .setDay(Integer.parseInt(line[0]))

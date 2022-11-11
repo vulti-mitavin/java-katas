@@ -1,8 +1,9 @@
-package org.example.impl.weatherdata;
+package org.example.impl.model;
 
-import java.util.Objects;
+import lombok.EqualsAndHashCode;
 
-public final class WeatherData {
+@EqualsAndHashCode
+public class WeatherData {
 
     private int day;
     private double maxTemp;
@@ -69,22 +70,6 @@ public final class WeatherData {
 
     public double avgTemp() {
         return avgTemp;
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-        if (obj == this) return true;
-        if (obj == null || obj.getClass() != this.getClass()) return false;
-        var that = (WeatherData) obj;
-        return this.day == that.day &&
-                Double.doubleToLongBits(this.maxTemp) == Double.doubleToLongBits(that.maxTemp) &&
-                Double.doubleToLongBits(this.minTemp) == Double.doubleToLongBits(that.minTemp) &&
-                Double.doubleToLongBits(this.avgTemp) == Double.doubleToLongBits(that.avgTemp);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(day, maxTemp, minTemp, avgTemp);
     }
 
     @Override

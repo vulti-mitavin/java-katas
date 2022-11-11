@@ -1,6 +1,7 @@
-package org.example.impl.file;
+package org.example.impl.util;
 
-import org.example.impl.weatherdata.WeatherDataImporter;
+import lombok.experimental.UtilityClass;
+import org.example.impl.importer.AbstractDataImporter;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -10,6 +11,7 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
+@UtilityClass
 public class ResourceReader {
 
     private static final int NOT_SPECIFIED = -1;
@@ -17,9 +19,6 @@ public class ResourceReader {
     private static InputStream in;
     private static int from;
     private static int to;
-
-    private ResourceReader() {
-    }
 
     public static List<String[]> read(String resource) {
         return read(resource, NOT_SPECIFIED, NOT_SPECIFIED);
@@ -30,7 +29,7 @@ public class ResourceReader {
     }
 
     public static List<String[]> read(String resource, int fromColumn, int toColumn) {
-        in = WeatherDataImporter.class.getResourceAsStream(resource);
+        in = AbstractDataImporter.class.getResourceAsStream(resource);
         from = fromColumn;
         to = toColumn;
         return readLines();
@@ -57,8 +56,9 @@ public class ResourceReader {
      */
     private static List<String[]> mapLinesToArray(BufferedReader br) {
         return br.lines()
+                .skip(Constants.DATA_LINES_START)
                 .map(String::trim)
-                .map(l -> l.split(" +"))
+                .map(l -> l.split("[ -]+"))
                 .filter(arr -> arr.length > 1)
                 .map(ResourceReader::cutArray)
                 .toList();

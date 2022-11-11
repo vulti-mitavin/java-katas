@@ -1,5 +1,8 @@
-package org.example.impl.weatherdata;
+package org.example.impl.service;
 
+import org.example.impl.util.Constants;
+import org.example.impl.importer.WeatherDataImporter;
+import org.example.impl.model.WeatherData;
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
@@ -9,6 +12,8 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.*;
 
 class WeatherDataServiceTest {
+
+    private final WeatherDataImporter importer = new WeatherDataImporter();
 
     @Test
     void testFindDayWithLeastTempSpreadEmpty() {
@@ -48,7 +53,7 @@ class WeatherDataServiceTest {
 
     @Test
     void testFindDayWithLeastTempSpread_2() {
-        List<WeatherData> weatherData = WeatherDataImporter.importData();
+        List<WeatherData> weatherData = importer.importData(Constants.WEATHER_DATA_RESOURCE);
         assertEquals(14, WeatherDataService.findDayWithLeastTempSpread(weatherData));
     }
 }

@@ -1,11 +1,11 @@
-package org.example.impl.weatherdata;
+package org.example.impl.model;
 
 import org.junit.jupiter.api.Test;
 
 import java.text.DecimalFormat;
 import java.text.DecimalFormatSymbols;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class WeatherDataTest {
 
