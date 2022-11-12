@@ -11,7 +11,7 @@
     <artifactId>kata-02-karate-chop</artifactId>
     <packaging>jar</packaging>
 
-    <name>karate-chop</name>
+    <name>kata-02-karate-chop</name>
     <url>http://maven.apache.org</url>
 
     <properties>

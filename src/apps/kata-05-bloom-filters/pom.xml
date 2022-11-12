@@ -27,7 +27,7 @@
         </dependency>
         <dependency>
             <groupId>ch.grassl</groupId>
-            <artifactId>kata-core</artifactId>
+            <artifactId>core</artifactId>
             <version>1.0</version>
         </dependency>
     </dependencies>

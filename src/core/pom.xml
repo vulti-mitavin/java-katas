@@ -13,7 +13,7 @@
     <version>1.0</version>
     <packaging>jar</packaging>
 
-    <name>kata-core</name>
+    <name>core</name>
     <url>http://maven.apache.org</url>
 
     <properties>
