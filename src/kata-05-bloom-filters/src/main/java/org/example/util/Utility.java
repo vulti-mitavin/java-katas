@@ -14,31 +14,22 @@ public class Utility {
         return bits;
     }
 
-    public static String getMd5HashValue(String val) {
-        return getMd5HashValue(val, Constants.DEFAULT_SALT);
-    }
-
-    public static String getMd5HashValue(String val, String salt) {
-        if (val != null) {
-            return DigestUtils.md5Hex(val + salt).toUpperCase();
-        } else {
-            throw new IllegalArgumentException("Error calculating MD5 hash value. Input must not be null.");
-        }
-    }
-
     public static int[] createIndices(int hashFunctions, String val) {
         StringBuilder salt = new StringBuilder(Constants.DEFAULT_SALT);
         int[] indices = new int[hashFunctions];
         for (int i = 0; i < indices.length; i++) {
-            String hash = getMd5HashValue(val, salt.toString());
-            int index = getIndex(hash);
-            indices[i] = index;
-            salt.append(hash).append(val).append(Constants.DEFAULT_SALT);
+            int hashCode = (val + salt).hashCode();
+            indices[i] = getIndex(hashCode);
+            salt.append(hashCode).append(val).append(Constants.DEFAULT_SALT);
         }
         return indices;
     }
 
-    private static int getIndex(String hash) {
-        return Integer.parseInt(hash.substring(0, Constants.NUMBER_OF_BYTES_FROM_HASH), 16);
+    private static int getIndex(int hash) {
+        hash = Math.abs(hash);
+        while (hash >= Constants.BIT_ARRAY_SIZE) {
+            hash /= 10;
+        }
+        return hash;
     }
 }

@@ -10,18 +10,14 @@ class DictionaryTest {
 
     @Test
     void testDictionary_contains() {
-        String[] words = new String[]{
-                "sfjpo2q3tpqehr98gdev",
-                "ü0jvsajvdsaöljfp0t",
-                "üjr0jdölvakvoi4h3pfa",
-                "lskjfwj3ro2ij3r",
-                "32oi4poüpuv0uewr",
-                "ölajewpr23ur409294uwlfd",
-                "309468ewrgegw",
-                "4309853jg039rgf",
-                "pug 09u0ß9430ßu43g98 lreg",
-                "jshf2h3trh432r",
-        };
+        String[] words = new String[]{"sfjpo2q3tpqehr98gdev", "ü0jvsajvdsaöljfp0t",
+                "üjr0jdölvakvoi4h3pfa", "lskjfwj3ro2ij3r", "32oi4poüpuv0uewr",
+                "welkjrr3232", "324324wer", "üpi3tü0ure0gugq3ö4jf",
+                "i3u092u4", "5457858", "123123213123123",
+                "xchewhjf3iu", "cpvu090we", "fkjewf3q",
+                "welkjrr3232", "324324wer", "üpi3tü0ure0gugq3ö4jf",
+                "ölajewpr23ur409294uwlfd", "309468ewrgegw", "4309853jg039rgf",
+                "pug 09u0ß9430ßu43g98 lreg", "jshf2h3trh432r"};
 
         int falsePositive = 0;
         for (String word : words) {
