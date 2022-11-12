@@ -4,22 +4,17 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e3574a8e-c28a-41a7-8a9a-ca9deed4465a" name="Changes" comment="Kata-04 part 2">
-      <change afterPath="$PROJECT_DIR$/src/kata-05-bloom-filters/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/kata-05-bloom-filters/src/main/java/org/example/App.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/kata-05-bloom-filters/src/main/java/org/example/SpellChecker.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/kata-05-bloom-filters/src/main/java/org/example/log4j2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/kata-05-bloom-filters/src/main/java/org/example/util/Constants.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/kata-05-bloom-filters/src/main/java/org/example/util/ResourceReader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/kata-05-bloom-filters/src/main/java/org/example/util/Utility.java" afterDir="false" />
+    <list default="true" id="e3574a8e-c28a-41a7-8a9a-ca9deed4465a" name="Changes" comment="Kata-05 Bloom Filter with MD5">
+      <change afterPath="$PROJECT_DIR$/src/kata-05-bloom-filters/src/main/java/org/example/Dictionary.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/kata-05-bloom-filters/src/main/resources/wordlist.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/kata-05-bloom-filters/src/test/java/org/example/AppTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/kata-05-bloom-filters/src/test/java/org/example/SpellCheckerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/kata-05-bloom-filters/src/test/java/org/example/util/ResourceReaderTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/kata-05-bloom-filters/src/test/java/org/example/util/UtilityTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/kata-05-bloom-filters/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/kata-05-bloom-filters/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/kata-05-bloom-filters/src/main/java/org/example/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/kata-05-bloom-filters/src/main/java/org/example/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/kata-05-bloom-filters/src/main/java/org/example/SpellChecker.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/kata-05-bloom-filters/src/main/java/org/example/util/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/kata-05-bloom-filters/src/main/java/org/example/util/Constants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/kata-05-bloom-filters/src/main/java/org/example/util/Utility.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/kata-05-bloom-filters/src/main/java/org/example/util/Utility.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/kata-05-bloom-filters/src/test/java/org/example/SpellCheckerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/kata-05-bloom-filters/src/test/java/org/example/DictionaryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/kata-05-bloom-filters/src/test/java/org/example/util/UtilityTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/kata-05-bloom-filters/src/test/java/org/example/util/UtilityTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,13 +67,15 @@
       <recent name="" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\michi\apps\java-katas\src\kata-05-bloom-filters\src\main\resources" />
       <recent name="C:\Users\michi\apps\java-katas\src\kata-04-data-munging\src\main\resources" />
     </key>
     <key name="MoveMembersDialog.RECENTS_KEY">
+      <recent name="org.example.util.Utility" />
+      <recent name="org.example.util.Constants" />
       <recent name="org.example.impl.Constants" />
       <recent name="org.example.impl.WeatherDataMapper" />
       <recent name="WeatherDataMapper.java" />
-      <recent name="WeatherDataMapper" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="org.example.impl.importer" />
@@ -88,8 +85,8 @@
       <recent name="org.example.impl.weatherdata" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
-      <recent name="org.example" />
       <recent name="org.example.util" />
+      <recent name="org.example" />
       <recent name="org.example.impl.model" />
       <recent name="org.example.impl.service" />
       <recent name="org.example.impl.weatherdata" />
@@ -105,53 +102,8 @@
       <command value="WeatherDataMapperTest.lineMapTestIllegalValue" />
     </option>
   </component>
-  <component name="RunManager" selected="Application.App">
-    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.example.App" />
-      <module name="kata-05-bloom-filters" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ResourceReaderTest.testReadStream" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="kata-05-bloom-filters" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.util.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.example.util" />
-      <option name="MAIN_CLASS_NAME" value="org.example.util.ResourceReaderTest" />
-      <option name="METHOD_NAME" value="testReadStream" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ResourceReaderTest.testRead_wrongResource_emptyArray" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="kata-05-bloom-filters" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.util.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.example.util" />
-      <option name="MAIN_CLASS_NAME" value="org.example.util.ResourceReaderTest" />
-      <option name="METHOD_NAME" value="testRead_wrongResource_emptyArray" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SpellCheckerTest.testSpellChecker" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.DictionaryTest.testDictionary_contains">
+    <configuration name="DictionaryTest.testDictionary_contains (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="kata-05-bloom-filters" />
       <extension name="coverage">
         <pattern>
@@ -160,14 +112,46 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="org.example" />
-      <option name="MAIN_CLASS_NAME" value="org.example.SpellCheckerTest" />
-      <option name="METHOD_NAME" value="testSpellChecker" />
+      <option name="MAIN_CLASS_NAME" value="org.example.DictionaryTest" />
+      <option name="METHOD_NAME" value="testDictionary_contains" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UtilityTest.testGetBitArray" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="DictionaryTest.testDictionary_contains" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="kata-05-bloom-filters" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example" />
+      <option name="MAIN_CLASS_NAME" value="org.example.DictionaryTest" />
+      <option name="METHOD_NAME" value="testDictionary_contains(java.lang.String)" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DictionaryTest.testDictionary_doesNotContain" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="kata-05-bloom-filters" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example" />
+      <option name="MAIN_CLASS_NAME" value="org.example.DictionaryTest" />
+      <option name="METHOD_NAME" value="testDictionary_doesNotContain(java.lang.String)" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UtilityTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="kata-05-bloom-filters" />
       <extension name="coverage">
         <pattern>
@@ -177,7 +161,22 @@
       </extension>
       <option name="PACKAGE_NAME" value="org.example.util" />
       <option name="MAIN_CLASS_NAME" value="org.example.util.UtilityTest" />
-      <option name="METHOD_NAME" value="testGetBitArray" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UtilityTest.testGetIndices_valueEmpty" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="kata-05-bloom-filters" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.util.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example.util" />
+      <option name="MAIN_CLASS_NAME" value="org.example.util.UtilityTest" />
+      <option name="METHOD_NAME" value="testGetIndices_valueEmpty" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -210,20 +209,20 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Application.App" />
-      <item itemvalue="JUnit.ResourceReaderTest.testReadStream" />
-      <item itemvalue="JUnit.ResourceReaderTest.testRead_wrongResource_emptyArray" />
-      <item itemvalue="JUnit.SpellCheckerTest.testSpellChecker" />
-      <item itemvalue="JUnit.UtilityTest.testGetBitArray" />
+      <item itemvalue="JUnit.DictionaryTest.testDictionary_contains" />
+      <item itemvalue="JUnit.DictionaryTest.testDictionary_contains (1)" />
+      <item itemvalue="JUnit.DictionaryTest.testDictionary_doesNotContain" />
+      <item itemvalue="JUnit.UtilityTest" />
+      <item itemvalue="JUnit.UtilityTest.testGetIndices_valueEmpty" />
       <item itemvalue="Maven.karate-chop [clean,test]" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.App" />
-        <item itemvalue="JUnit.SpellCheckerTest.testSpellChecker" />
-        <item itemvalue="JUnit.ResourceReaderTest.testReadStream" />
-        <item itemvalue="JUnit.ResourceReaderTest.testRead_wrongResource_emptyArray" />
-        <item itemvalue="JUnit.UtilityTest.testGetBitArray" />
+        <item itemvalue="JUnit.DictionaryTest.testDictionary_contains" />
+        <item itemvalue="JUnit.DictionaryTest.testDictionary_contains (1)" />
+        <item itemvalue="JUnit.DictionaryTest.testDictionary_doesNotContain" />
+        <item itemvalue="JUnit.UtilityTest" />
+        <item itemvalue="JUnit.UtilityTest.testGetIndices_valueEmpty" />
       </list>
     </recent_temporary>
   </component>
@@ -264,7 +263,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668165054524</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Setup Kata-05; Import wordlist">
+      <created>1668191804308</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1668191804308</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -283,7 +289,9 @@
     <MESSAGE value="Setup and Kata-04 part 1" />
     <MESSAGE value="Lombok" />
     <MESSAGE value="Kata-04 part 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="Kata-04 part 2" />
+    <MESSAGE value="Setup Kata-05; Import wordlist" />
+    <MESSAGE value="Kata-05 Bloom Filter with MD5" />
+    <option name="LAST_COMMIT_MESSAGE" value="Kata-05 Bloom Filter with MD5" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/java_katas$FootballTeamTest.ic" NAME="FootballTeamTest Coverage Results" MODIFIED="1668163348711" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
