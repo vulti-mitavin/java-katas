@@ -1,4 +1,4 @@
-package org.example.util;
+package ch.grassl.file;
 
 import lombok.experimental.UtilityClass;
 

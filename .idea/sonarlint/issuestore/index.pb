@@ -1,7 +1,4 @@
 
-:
-
-.gitignore,a\5\a5cc2925ca8258af241be7e5b0381edf30266302
 b
 2src/karate-chop/src/main/java/org/example/App.java,6\f\6ff9259c9198ef6fba578a79e16d62d1983674cc
 G

@@ -1,12 +1,11 @@
 package org.example;
 
+import ch.grassl.file.ResourceReader;
 import org.example.util.Constants;
-import org.example.util.ResourceReader;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.*;
 

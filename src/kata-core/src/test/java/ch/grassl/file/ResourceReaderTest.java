@@ -1,20 +1,21 @@
-package org.example.util;
+package ch.grassl.file;
 
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class ResourceReaderTest {
 
     @Test
-    void testRead_wrongResource_emptyArray() {
+    void testReadWhenWrongResourceReturnEmptyArray() {
         Object[] data = ResourceReader.read("wrong_resource");
         assertEquals(0, data.length);
     }
 
     @Test
     void testRead() {
-        Object[] data = ResourceReader.read(Constants.WORDLIST_RESOURCE);
+        Object[] data = ResourceReader.read("/test.txt");
         assertTrue(data.length > 0);
     }
 }

@@ -9,6 +9,7 @@
         <module>src/karate-chop</module>
         <module>src/kata-04-data-munging</module>
         <module>src/kata-05-bloom-filters</module>
+        <module>src/kata-core</module>
     </modules>
     <packaging>pom</packaging>
 
