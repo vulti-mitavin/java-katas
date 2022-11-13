@@ -1,13 +1,12 @@
 package ch.grassl.impl.importer;
 
-import ch.grassl.impl.util.Constants;
 import ch.grassl.impl.model.WeatherData;
+import ch.grassl.impl.util.Constants;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.*;
 
 class WeatherDataImporterTest {
 

@@ -1,9 +1,9 @@
 package ch.grassl;
 
 import ch.grassl.file.ResourceReader;
-import lombok.extern.slf4j.Slf4j;
 import ch.grassl.util.Constants;
 import ch.grassl.util.Utility;
+import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class Dictionary {
@@ -26,9 +26,9 @@ public class Dictionary {
     }
 
     private void filter() {
-        Object[] words = ResourceReader.read(Constants.WORDLIST_RESOURCE);
-        for (Object word : words) {
-            int[] indices = Utility.createIndices(Constants.HASH_FUNCTIONS, (String) word);
+        String[] words = ResourceReader.of(Constants.WORDLIST_RESOURCE).read();
+        for (String word : words) {
+            int[] indices = Utility.createIndices(Constants.HASH_FUNCTIONS, word);
             for (int index : indices) {
                 bitmap[index] = true;
             }

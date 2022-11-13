@@ -10,11 +10,11 @@ import java.util.*;
 public class Anagrams {
 
     @Getter
-    private final Object[] wordList;
+    private final String[] wordList;
     private final Map<String, List<String>> map = new HashMap<>();
 
     public Anagrams() {
-        wordList = ResourceReader.read(Constants.WORDLIST_RESOURCE);
+        wordList = ResourceReader.of(Constants.WORDLIST_RESOURCE).read();
         init();
     }
 
@@ -43,8 +43,8 @@ public class Anagrams {
     }
 
     private void init() {
-        for (Object o : wordList) {
-            populate((String) o);
+        for (String word : wordList) {
+            populate(word);
         }
         format(map);
     }

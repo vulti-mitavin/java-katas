@@ -1,26 +1,26 @@
 package ch.grassl.file;
 
-import lombok.experimental.UtilityClass;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 
-@UtilityClass
 public class ResourceReader {
 
-    private static InputStream in;
+    private final InputStream in;
 
-    public static Object[] read(String resource) {
+    public ResourceReader(String resource) {
         in = ResourceReader.class.getResourceAsStream(resource);
-        return readLines();
     }
 
-    private static Object[] readLines() {
+    public static ResourceReader of(String resource) {
+        return new ResourceReader(resource);
+    }
+
+    public String[] read() {
         if (in != null) {
             try (BufferedReader br = new BufferedReader(new InputStreamReader(in))) {
-                return br.lines().toArray();
+                return br.lines().toArray(String[]::new);
             } catch (IOException e) {
                 return new String[0];
             }

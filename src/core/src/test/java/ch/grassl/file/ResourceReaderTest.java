@@ -9,13 +9,13 @@ class ResourceReaderTest {
 
     @Test
     void testReadWhenWrongResourceReturnEmptyArray() {
-        Object[] data = ResourceReader.read("wrong_resource");
+        Object[] data = ResourceReader.of("wrong_resource").read();
         assertEquals(0, data.length);
     }
 
     @Test
     void testRead() {
-        Object[] data = ResourceReader.read("/test.txt");
+        Object[] data = ResourceReader.of("/test.txt").read();
         assertTrue(data.length > 0);
     }
 }

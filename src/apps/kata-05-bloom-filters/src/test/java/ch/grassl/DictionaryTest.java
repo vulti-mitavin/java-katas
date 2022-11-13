@@ -39,7 +39,7 @@ class DictionaryTest {
 
     @Test
     void testDictionary_noFalseNegative() {
-        Object[] wordList = ResourceReader.read(Constants.WORDLIST_RESOURCE);
+        String[] wordList = ResourceReader.of(Constants.WORDLIST_RESOURCE).read();
 
         List<String> negatives = new ArrayList<>();
         for (String word : WORDS) {
@@ -48,8 +48,8 @@ class DictionaryTest {
             }
         }
 
-        for (Object word : wordList) {
-            assertFalse(negatives.contains((String) word));
+        for (String word : wordList) {
+            assertFalse(negatives.contains(word));
         }
     }
 }
