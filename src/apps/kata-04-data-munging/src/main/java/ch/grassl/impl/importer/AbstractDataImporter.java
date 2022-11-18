@@ -15,7 +15,6 @@ public abstract class AbstractDataImporter<T> {
     private static final boolean SKIP_HEADER = true;
     public static final String SPLIT_REGEX = "[ -]+";
 
-    private List<String[]> rawData;
     private final int fromColumn;
     private final int toColumn;
 
@@ -28,23 +27,12 @@ public abstract class AbstractDataImporter<T> {
         this.toColumn = toColumn;
     }
 
-    public abstract T map(String[] line);
-
     public List<T> importData(String resource) {
-        List<T> data = new ArrayList<>();
         String[] lines = ResourceReader.of(resource).read();
-        rawData = mapLinesToArrays(lines);
-        populate(data);
-        return data;
+        List<String[]> rawData = mapLinesToArrays(lines);
+        return getData(rawData);
     }
 
-    /**
-     * Maps String lines from a resource stream to arrays. It filters empty lines and cuts the arrays to
-     * the desired indices.
-     *
-     * @param lines The imported data in form of a String array
-     * @return Array of lines from the imported data
-     */
     private List<String[]> mapLinesToArrays(String[] lines) {
         return Stream.of(lines)
                 .skip(SKIP_HEADER ? 1 : 0)
@@ -75,7 +63,8 @@ public abstract class AbstractDataImporter<T> {
                 fromColumn == NOT_SPECIFIED ? 0 : fromColumn, toColumn == NOT_SPECIFIED ? arr.length : toColumn);
     }
 
-    private void populate(List<T> data) {
+    private List<T> getData(List<String[]> rawData) {
+        List<T> data = new ArrayList<>();
         for (String[] rawDatum : rawData) {
             try {
                 data.add(
@@ -85,5 +74,8 @@ public abstract class AbstractDataImporter<T> {
                 log.error("Error mapping line {} to {}: {}", rawDatum, data.get(0).getClass(), e.getMessage());
             }
         }
+        return data;
     }
+
+    public abstract T map(String[] line);
 }

@@ -6,11 +6,11 @@
     <artifactId>java-katas</artifactId>
     <version>1.0-SNAPSHOT</version>
     <modules>
-        <module>src/core</module>
         <module>src/apps/kata-02-karate-chop</module>
         <module>src/apps/kata-04-data-munging</module>
         <module>src/apps/kata-05-bloom-filters</module>
         <module>src/apps/kata-06-anagrams</module>
+        <module>src/apps/kata-09-checkout</module>
     </modules>
     <packaging>pom</packaging>
 
