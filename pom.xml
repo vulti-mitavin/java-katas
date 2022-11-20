@@ -11,6 +11,7 @@
         <module>src/apps/kata-05-bloom-filters</module>
         <module>src/apps/kata-06-anagrams</module>
         <module>src/apps/kata-09-checkout</module>
+        <module>src/apps/kata-11-sorting-it-out</module>
     </modules>
     <packaging>pom</packaging>
 
